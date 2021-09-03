@@ -69,11 +69,13 @@ input{
 }
 
 textarea{
+    height: 150px;
     outline: none;
     margin-top: 10px;
     resize: none;
     font-size: 1.2rem;
     font-family: 'Montaga', serif;
+    width: 90%;
 }
 
 button{

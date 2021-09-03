@@ -5,7 +5,7 @@ body{
 }
 
 header{
-    height: 8vh;
+    height: 10vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -22,7 +22,7 @@ header nav{
 
 header nav a{
     text-decoration: none;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: #ffffff;
     font-family: 'Montaga', serif;
 }
@@ -40,4 +40,50 @@ header nav a:hover{
     width: 40px;
     margin: 0 5px;
     height: 40px;
+}
+
+@media screen and (max-width: 1340px ) {
+    header nav {
+        width: 50%;
+    }
+    .social-network_container{
+        margin-right: inherit;
+    }
+}
+
+@media screen and (max-width: 850px){
+    header nav {
+        width: 70%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    header nav {
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    header nav a {
+        margin: 0 10px;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .social-network_container img {
+        height: 30px;
+        width: 30px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    header nav a {
+        font-size: 1rem;
+        margin: 0 5px;
+    }
+
+    .social-network_container img {
+        height: 20px;
+        width: 20px;
+    }
 }

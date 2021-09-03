@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Page de contact | Charles Cantin</title>
+    <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/contact.css" />
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Accueil</a>
+            <a href="gallery.html">Galerie</a>
+            <a href="#">Tarif & Prestations</a>
+        </nav>
+        <div class="social-network_container">
+            <a href="#">
+                <img role="link" src="assets/images/instagram.svg" alt="lien page instagram">
+            </a>
+            <a href="#">
+                <img role="link" src="assets/images/facebook.svg" alt="lien page facebook">
+            </a>
+        </div>
+    </header>
+    <main>
+        <section class="title-container">
+            <h1>Pour une demande d’informations ou toutes prestations
+                personnalisées, veuillez renseigner le formulaire de contact ci-dessous : </h1>
+        </section>
+        <form method="POST">
+            <div class="container-fullname ">
+                <div>
+                    <label for="lastname">Votre nom:</label>
+                    <input type="text" name="lastname" id="lastname" class="form-control" />
+                </div>
+                <div>
+                    <label for="firstname">Votre prénom:</label>
+                    <input type="text" name="firstname" id="firstname" class="form-control">
+                </div>
+                <div>
+                    <label for="phone">Téléphone:</label>
+                    <input type="tel" name="phone" id="phone" class="form-control">
+                </div>
+                <div>
+                    <label for="email">Adresse email:</label>
+                    <input type="email" name="email" id="email" class="form-control">
+                </div>
+            </div>
+            <div class="container-message">
+                <label for="message">Message: </label>
+                <textarea cols="80" rows="8" name="message" id="message" class="form-control"></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+        <footer>
+
+        </footer>
+    </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+
+body{
+    margin: 0;
+}
+
+header{
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid #ffffff;
+    background: rgba(52, 66, 75, 0.9);
+}
+
+header nav{
+    width: 30%;
+    display: flex;
+    justify-content: space-around;
+}
+
+header nav a{
+    text-decoration: none;
+    font-size: 1.3rem;
+    color: #ffffff;
+    font-family: 'Montaga', serif;
+}
+
+header nav a:hover{
+    font-weight: bold;
+    border-bottom: 1px solid #ffffff;
+}
+
+.social-network_container{
+    margin-right: 50px;
+}
+
+.social-network_container img{
+    width: 40px;
+    margin: 0 5px;
+    height: 40px;
+}

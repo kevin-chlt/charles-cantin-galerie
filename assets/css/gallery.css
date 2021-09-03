@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Montaga&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
+/* BLOC CHOIX CATEGORIES */
+.categories-container {
+    background: rgba(52, 66, 75, 0.9);
+    font-family: 'Oregano', cursive;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 8vh;
+}
+
+.categories-container h1 {
+    color: #ffffff;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    margin: inherit;
+    font-weight: normal;
+    border-bottom: 1px #ffffff solid;
+}
+
+.categories-container ol {
+    display: flex;
+    list-style: none;
+    margin: inherit;
+    padding-left: inherit;
+}
+
+ol li, .categories-container span{
+    letter-spacing: 1px;
+    margin: 0 30px;
+    color: #ffffff;
+    font-size: 1.35rem;
+}
+
+.active, ol li:hover, .categories-container span:hover  {
+    cursor: pointer;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #ffffff;
+}
+
+/* BLOC GALERY */
+
+.image-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+    background: #97AEBC;
+}
+
+.image-container img {
+    border-radius: 10px;
+    margin: 20px 0;
+    width: 310px;
+    height: 300px;
+}
+
+/* BOUTON "VOIR PLUS" */
+
+.btn-more-container {
+    background: rgba(52, 66, 75, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding-top: 12px;
+}
+
+.btn-more{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #97AEBC;
+    padding: 8px 35px;
+    transition: 0.3s;
+}
+
+.btn-more:hover{
+    box-shadow: rgba(52, 66, 75, 0.6) 0px 15px 30px -8px inset, rgba(52, 66, 75, 0.7) 0px 9px 18px -12px inset;
+}
+
+.btn-more span {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-family: 'Montaga', serif;
+}
+
+.btn-more img {
+    height: 30px;
+}
+
+/* Footer */
+
+footer{
+    height: 10vh;
+    background: rgba(52, 66, 75, 0.90);
+    width: 100%;
+}
+
+

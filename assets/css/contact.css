@@ -1,0 +1,104 @@
+main{
+    background: #97AEBC;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title-container{
+    background: rgba(52, 66, 75, 0.80);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    width: 70%;
+}
+
+.title-container h1{
+    color: #ffffff;
+    font-size: 1.4rem;
+    margin: inherit;
+    font-family: 'Montaga', serif;
+    font-weight: normal;
+}
+
+form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    align-self: center;
+ }
+
+.container-fullname{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    justify-items: center;
+}
+
+.container-fullname div, .container-message{
+    background: rgba(52, 66, 75, 0.80);
+    margin: 20px 0;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px 15px 30px;
+}
+
+.container-message{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-self: center;
+    width: 60%;
+}
+
+label{
+    color: white;
+    font-size: 1.3rem;
+    font-family: 'Montaga', serif;
+    margin-bottom: 10px;
+}
+input{
+    outline: none;
+    height: 34px;
+    width: 80%;
+    font-size: 1.2rem;
+}
+
+textarea{
+    outline: none;
+    margin-top: 10px;
+    resize: none;
+    font-size: 1.2rem;
+    font-family: 'Montaga', serif;
+}
+
+button{
+    width: 15%;
+    align-self: center;
+    background: rgba(52, 66, 75, 0.80);
+    padding: 8px 15px;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-family: 'Montaga', serif;
+    transition: 0.5s;
+    border: none;
+    margin-bottom: 15px;
+}
+
+button:hover{
+    background: #97AEBC;
+    text-decoration: underline;
+    cursor: pointer;
+    box-shadow: #97AEBC 0px 15px 30px -8px inset, rgba(52, 66, 75, 0.9) 0px 9px 18px -12px inset;
+    border: solid 1px rgba(52, 66, 75, 0.80);
+}
+
+footer{
+    height: 10vh;
+    background: rgba(52, 66, 75, 0.80);
+    width: 100%;
+}

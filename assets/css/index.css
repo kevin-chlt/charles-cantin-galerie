@@ -49,3 +49,37 @@ a:hover{
     font-weight: bold;
     border-bottom: 1px solid #ffffff;
 }
+
+@media screen and (max-width: 630px) {
+    main nav {
+        top: 50px;
+    }
+
+    nav a {
+        font-size: 1.4rem;
+    }
+
+    .separator{
+        top: 70px;
+    }
+
+    img {
+        width: 100%;
+        border: none;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    main nav {
+        top: 20px;
+    }
+    nav a {
+        font-size: 1.1rem;
+    }
+    .separator{
+        top: 60px;
+    }
+    img{
+        height: auto;
+    }
+}

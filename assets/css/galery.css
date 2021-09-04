@@ -158,6 +158,7 @@ footer span {
     }
 
     .image-container img {
-        max-height: 60%;
+        height: auto;
+        max-height: 250px;
     }
 }

@@ -7,7 +7,7 @@ main {
 }
 
 section {
-    background: rgba(52, 66, 75, 0.80);
+    background: rgba(52, 66, 75, 0.75);
     padding: 10px 20px;
     margin-top: 25px;
     display: flex;
@@ -41,11 +41,24 @@ section p, section span{
     font-family: 'Montaga', serif;
 }
 
-footer {
+footer{
+    border-top: 1px solid #ffffff;
     height: 10vh;
-    background: rgba(52, 66, 75, 0.80);
+    background: rgba(52, 66, 75, 0.90);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+footer span {
+    color: #ffffff;
+    font-size: 1rem;
+    font-style: italic;
+    font-family: 'Oregano', serif;
+    padding-bottom: 4px;
+    border-bottom: 1px #ffffff solid;
+}
 @media screen and (max-width: 675px){
     main {
         padding: 20px 30px;

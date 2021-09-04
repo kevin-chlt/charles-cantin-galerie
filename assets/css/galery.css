@@ -33,7 +33,7 @@ ol li, .categories-container span{
     font-size: 1.35rem;
 }
 
-.active, ol li:hover, .categories-container span:hover  {
+ol li:hover, .categories-container span:hover  {
     cursor: pointer;
     font-weight: bold;
     padding-bottom: 2px;
@@ -65,7 +65,7 @@ ol li, .categories-container span{
     justify-content: center;
     align-items: center;
     height: 10vh;
-    padding-top: 12px;
+    padding: 12px 0;
 }
 
 .btn-more{
@@ -94,9 +94,22 @@ ol li, .categories-container span{
 /* Footer */
 
 footer{
+    border-top: 1px solid #ffffff;
     height: 10vh;
     background: rgba(52, 66, 75, 0.90);
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span {
+    color: #ffffff;
+    font-size: 1rem;
+    font-style: italic;
+    font-family: 'Oregano', serif;
+    padding-bottom: 4px;
+    border-bottom: 1px #ffffff solid;
 }
 
 /* Media Queries */

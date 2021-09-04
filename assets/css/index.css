@@ -3,7 +3,8 @@
 body{
     margin: 0;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     background: rgba(52, 66, 75, 0.9)
 }
 
@@ -50,6 +51,25 @@ a:hover{
     border-bottom: 1px solid #ffffff;
 }
 
+footer{
+    border-top: 1px solid #97AEBC;
+    height: 10vh;
+    background: rgba(52, 66, 75, 0.50);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span {
+    color: #ffffff;
+    font-size: 1rem;
+    font-style: italic;
+    font-family: 'Oregano', serif;
+    padding-bottom: 4px;
+    border-bottom: 1px #ffffff solid;
+}
+
 @media screen and (max-width: 630px) {
     main nav {
         top: 50px;
@@ -70,16 +90,35 @@ a:hover{
 }
 
 @media screen and (max-width: 400px) {
+    main{
+        height: 100vh;
+    }
+
     main nav {
+        align-self: flex-start;
         top: 20px;
     }
+
     nav a {
         font-size: 1.1rem;
     }
+
     .separator{
         top: 60px;
     }
-    img{
-        height: auto;
+}
+
+
+@media screen and (max-height: 630px) {
+    main nav {
+        top: 30px;
+    }
+
+    nav a {
+        font-size: 1rem;
+    }
+
+    .separator{
+        top: 50px;
     }
 }

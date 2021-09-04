@@ -15,7 +15,7 @@ header{
 }
 
 header nav{
-    width: 30%;
+    width: 50%;
     display: flex;
     justify-content: space-around;
 }
@@ -42,32 +42,49 @@ header nav a:hover{
     height: 40px;
 }
 
+.active{
+    cursor: pointer;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #ffffff;
+}
+
 @media screen and (max-width: 1340px ) {
     header nav {
-        width: 50%;
+        width: 60%;
     }
     .social-network_container{
         margin-right: inherit;
     }
 }
 
-@media screen and (max-width: 850px){
+@media screen and (max-width: 900px){
     header nav {
-        width: 70%;
+        width: 80%;
     }
 
 }
 
 @media screen and (max-width: 600px) {
+    header{
+        height: 15vh;
+    }
+
     header nav {
         justify-content: flex-start;
         align-items: center;
     }
 
     header nav a {
-        margin: 0 10px;
-        font-size: 1.2rem;
+        margin: 0 5px;
+        font-size: 1.1rem;
         text-align: center;
+    }
+
+    .social-network_container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .social-network_container img {
@@ -76,14 +93,3 @@ header nav a:hover{
     }
 }
 
-@media screen and (max-width: 400px) {
-    header nav a {
-        font-size: 1rem;
-        margin: 0 5px;
-    }
-
-    .social-network_container img {
-        height: 20px;
-        width: 20px;
-    }
-}

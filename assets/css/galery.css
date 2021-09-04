@@ -53,8 +53,8 @@ ol li, .categories-container span{
 .image-container img {
     border-radius: 10px;
     margin: 20px 0;
-    width: 310px;
-    height: 300px;
+    width: 80%;
+    height: 80%;
 }
 
 /* BOUTON "VOIR PLUS" */
@@ -108,26 +108,20 @@ footer{
 }
 
 @media screen and (max-width: 950px) {
-    ol li, .categories-container span {
-        font-size: 1.3rem;
-        margin: 0 5px;
-    }
-    .categories-container h1 {
-        font-size: 1.3rem;
-    }
-
-    .image-container img {
-        height: 150px;
-        width: 155px;
-    }
-}
-
-@media screen and (max-width: 900px) {
     .categories-container {
         justify-content: center;
     }
 
+    ol li, .categories-container span {
+        margin: 0 5px;
+    }
+     ol li, .categories-container span  {
+         display: none;
+         border: none;
+    }
+
     .categories-container h1 {
+        font-size: 1.3rem;
         border: none;
         cursor: pointer;
         background: #97AEBC;
@@ -138,32 +132,15 @@ footer{
     .categories-container h1:hover{
         box-shadow: rgba(52, 66, 75, 0.6) 0px 15px 30px -8px inset, rgba(52, 66, 75, 0.7) 0px 9px 18px -12px inset;
     }
-
-    ol li, .categories-container span{
-        display: none;
-        border: none;
-    }
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 700px) {
     .categories-container h1, .btn-more {
         padding: 6px 20px;
     }
 
-    .image-container{
+    .image-container {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr 1fr;
-    }
-
-    .image-container img{
-        width: 200px;
-        height: 205px;
-    }
-}
-@media screen and (max-width: 405px) {
-    .image-container img {
-        width: 150px;
-        height: 155px;
-        margin: 10px 0;
     }
 }

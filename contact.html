@@ -6,9 +6,11 @@
     <title>Page de contact | Charles Cantin</title>
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/contact.css" />
+    <script src="node_modules/requirejs/require.js" defer></script>
+    <script type="text/javascript" src="assets/js/check-data.js" defer></script>
 </head>
 <body>
-    <header>
+<header>
         <nav>
             <a href="index.html">Accueil</a>
             <a href="galery.html">Galerie</a>
@@ -29,7 +31,8 @@
             <h1>Pour une demande d’informations ou toutes prestations
                 personnalisées, veuillez renseigner le formulaire de contact ci-dessous : </h1>
         </section>
-        <form method="POST">
+        <form method="POST" id="form">
+            <div class="help-text" id="help-text"></div>
             <div class="container-fullname ">
                 <div>
                     <label for="lastname">Votre nom:</label>
@@ -52,7 +55,7 @@
                 <label for="message">Message: </label>
                 <textarea name="message" id="message" class="form-control"></textarea>
             </div>
-            <button type="submit">Envoyer</button>
+            <button type="submit" id="submitBtn">Envoyer</button>
         </form>
         <footer>
             <span>Made by Kevin CHALLIT</span>

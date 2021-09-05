@@ -30,6 +30,22 @@ form {
     width: 80%;
 }
 
+.help-text{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    margin: 10px 0;
+    background: rgba(52, 66, 75, 0.80);
+}
+
+.help-text span {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-family: 'Montaga', serif;
+
+}
+
 .container-fullname{
     display: grid;
     grid-template-columns: 1fr 1fr;

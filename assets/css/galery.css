@@ -26,14 +26,21 @@
     padding-left: inherit;
 }
 
-ol li, .categories-container span{
+ol li{
     letter-spacing: 1px;
     margin: 0 30px;
     color: #ffffff;
     font-size: 1.35rem;
 }
 
-ol li:hover, .categories-container span:hover  {
+ol li:hover  {
+    cursor: pointer;
+    font-weight: bold;
+    padding-bottom: 2px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.active-category{
     cursor: pointer;
     font-weight: bold;
     padding-bottom: 2px;
@@ -115,36 +122,64 @@ footer span {
 /* Media Queries */
 
 @media screen and (max-width: 1150px) {
-    ol li, .categories-container span {
+    ol li {
         margin: 0 15px;
     }
 }
 
 @media screen and (max-width: 950px) {
     .categories-container {
-        justify-content: center;
-    }
-
-    ol li, .categories-container span {
-        margin: 0 5px;
-    }
-     ol li, .categories-container span  {
-         display: none;
-         border: none;
-    }
-
-    .categories-container h1 {
-        font-size: 1.3rem;
-        border: none;
-        cursor: pointer;
         background: #97AEBC;
-        padding: 8px 35px;
-        transition: 0.3s;
+        flex-direction: column;
+        height: auto;
+        transition: 0.8s;
+        padding-top: 20px ;
     }
 
-    .categories-container h1:hover{
-        box-shadow: rgba(52, 66, 75, 0.6) 0px 15px 30px -8px inset, rgba(52, 66, 75, 0.7) 0px 9px 18px -12px inset;
+    .categories-container .open{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px 0;
+        border-bottom: 1px #ffffff solid;
+        width: 100%;
+
     }
+
+    .categories-container .title-close {
+        font-size: 1.3rem;
+        cursor: pointer;
+        border: inherit;
+        background: rgba(52, 66, 75, 0.90);
+        padding: 8px 35px;
+
+    }
+
+    .categories-container .title-close:hover{
+        background: #97AEBC;
+    }
+
+    .active-category{
+        text-decoration: underline;
+        background: rgba(52, 66, 75, 0.90);
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+    }
+
+    .active-category:hover{
+        padding: 10px 0;
+    }
+
+    .categories-container .close{
+        display: none;
+    }
+
+    .categories-container .title-open {
+        transition: 0.3s;
+        cursor: pointer;
+    }
+
 }
 
 @media screen and (max-width: 700px) {

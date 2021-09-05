@@ -6,6 +6,7 @@
     <title>Galerie Photo | Charles Cantin</title>
     <link rel="stylesheet" href="assets/css/header.css" />
     <link rel="stylesheet" href="assets/css/galery.css" />
+    <script src="assets/js/dropdown-categorie.js" defer ></script>
 </head>
 <body>
     <header>
@@ -26,8 +27,8 @@
     </header>
     <main>
         <nav class="categories-container">
-            <h1>Catégories: </h1>
-            <ol>
+            <h1 class="title-close" id="category-title">Catégories: </h1>
+            <ol class="close" id="category-list">
                 <li>Mariage</li>
                 <li>Grossesse</li>
                 <li>Bébé</li>
@@ -35,8 +36,8 @@
                 <li>Baptême</li>
                 <li>Couple</li>
                 <li>Portrait</li>
+                <li class="active-category">A la une</li>
             </ol>
-            <span class="active">A la une</span>
         </nav>
         <section class="galery-container">
             <div class="image-container">

@@ -31,19 +31,22 @@ form {
 }
 
 .help-text{
+    transition: 0.3s;
+    border-radius: 10px;
     display: none;
     flex-direction: column;
     align-items: center;
-    padding: 10px;
-    margin: 10px 0;
+    width: auto;
+    align-self: center;
+    padding:15px 20px;
+    margin: 5px 0;
     background: rgba(52, 66, 75, 0.80);
 }
 
 .help-text span {
     color: #ffffff;
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-family: 'Montaga', serif;
-
 }
 
 .container-fullname{
@@ -72,6 +75,14 @@ form {
     width: 60%;
 }
 
+.rgpd-box{
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
 label{
     color: white;
     font-size: 1.3rem;
@@ -79,7 +90,7 @@ label{
     margin-bottom: 10px;
 }
 
-input{
+input[type = text], input[type= email], input[type = tel]{
     outline: none;
     height: 70%;
     width: 80%;
@@ -148,8 +159,13 @@ footer span {
         font-size: 1.2rem;
     }
 
-    input, textarea {
+    input[type = text], input[type= email], input[type = tel], textarea {
         font-size: 1.1rem;
+    }
+
+    .rgpd-box label {
+        text-align: center;
+        font-size: 0.9rem;
     }
 
     form{
@@ -186,7 +202,7 @@ footer span {
         font-size: 1rem;
     }
 
-    input {
+    input[type = text], input[type= email], input[type = tel] {
         height: 2rem;
         font-size: 1rem;
     }

@@ -23,24 +23,23 @@ const setIdOnCategory = () => {
     for(let i = 0; i < listLength; i++) {
         allLi[i].setAttribute('id', 'category-'+ i);
     }
-
-    createEvent(listLength);
+    return createEvent(listLength);
 }
 // Create event listener for each category & add function to put the "active" CSS class to the category item clicked   //
 
 
 const createEvent = (listLength) => {
     let categoryActiveIndex = 7;
-    for(let i = 0; i < listLength; i++) {
 
+    for(let i = 0; i < listLength; i++) {
         const category = document.getElementById('category-'+ i);
         category.addEventListener('click', () => {
             const oldCategory = document.getElementById('category-'+ categoryActiveIndex);
             oldCategory.classList.remove('active-category');
             category.className = 'active-category';
+            request(i+1);
             return categoryActiveIndex = i;
         });
-
     }
 }
 setIdOnCategory();

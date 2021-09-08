@@ -9,10 +9,11 @@ let errors = [];
 
 requirejs(['node_modules/validator/validator.min'], (validator) => {
     form.addEventListener('submit', (e) => {
+        e.preventDefault()
         if(validator.isEmpty(firstName.value) || !validator.isAlpha(firstName.value || firstName.value.length > 50) ) {
             errors.push('Veuillez saisir un prénom composé uniquement de lettres.') ;
         }
-        if (validator.isEmpty(lastName.value) || !validator.isAlpha(lastName.value) || lastName.value.length > 50){
+        if(validator.isEmpty(lastName.value) || !validator.isAlpha(lastName.value) || lastName.value.length > 50){
             errors.push('Veuillez saisir un nom composé uniquement de lettres.');
         }
         if(validator.isEmpty(email.value) || !validator.isEmail(email.value)) {
@@ -29,10 +30,12 @@ requirejs(['node_modules/validator/validator.min'], (validator) => {
         }
 
         if(errors.length !== 0) {
-            e.preventDefault()
             cleanHelpText();
             displayErrors(errors);
+        }else {
+            getJwt()
         }
+
         return errors = [];
     });
 });

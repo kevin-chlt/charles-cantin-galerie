@@ -3,6 +3,7 @@ const title = document.getElementById('category-title');
 
 // Revert class at each click on categories button dropdown //
 let open = false;
+
 title.addEventListener('click', () => {
     if (!open) {
         title.className = 'title-open';
@@ -13,10 +14,10 @@ title.addEventListener('click', () => {
         list.className = 'close';
         return open = false;
 });
-
+let categoryActiveId = 8;
 // Create event listener for each category & add function to put the "active" CSS class to the category item clicked   //
 const createEvent = () => {
-    let categoryActiveId = 8;
+
 
     for(let i = 1; i < list.children.length +1; i++) {
         const category = document.getElementById('category-'+ i);

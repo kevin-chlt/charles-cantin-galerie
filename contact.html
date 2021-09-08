@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="assets/css/contact.css" />
     <script src="node_modules/requirejs/require.js" defer></script>
     <script type="text/javascript" src="assets/js/check-data.js" defer></script>
+    <script src="assets/js/send-data.js" defer></script>
 </head>
 <body>
     <header>
@@ -55,12 +56,12 @@
                 <label for="message">Message: </label>
                 <textarea name="message" id="message"></textarea>
             </div>
-            <div class="rgpd-box">
-                <input type="checkbox" id="rgpd" name="rgpd" />
-                <label for="rgpd">J'acceptes les conditions de récolte de mes données personnelles.</label>
-            </div>
             <button type="submit" id="submitBtn">Envoyer</button>
         </form>
+        <div class="rgpd-box">
+            <input type="checkbox" id="rgpd" name="rgpd" />
+            <label for="rgpd">J'acceptes les conditions de récolte de mes données personnelles.</label>
+        </div>
     </main>
     <footer>
         <span>Made by Kevin CHALLIT</span>

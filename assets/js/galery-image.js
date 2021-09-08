@@ -29,11 +29,16 @@ const requestCategory = (id) => {
 };
 requestCategory(8);
 
+
 btnMore.addEventListener('click', () => {
-    for(let i = 0; i < 6; i++) {
-        const img = document.createElement('img');
-        img.src = 'assets/images/charles-cantin-accueil_background.png';
-        galery.appendChild(img);
-    }
+    fetch(`https://api-charles-cantin.herokuapp.com/upload/files?${url}`)
+        .then((res) => res.json())
+        .then((data) => {
+            for (let i = 0; i < 6; i++) {
+                const img = document.createElement('img');
+                img.src = 'assets/images/charles-cantin-accueil_background.png';
+                galery.appendChild(img);
+            }
+        })
 });
 

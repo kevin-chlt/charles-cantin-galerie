@@ -1,4 +1,5 @@
 const galery = document.getElementById('container-images-1');
+const btnMore = document.getElementById('btn-more');
 
 // Clean the galery image list //
 const clearGalery = () => {
@@ -9,18 +10,30 @@ const clearGalery = () => {
 };
 
 // Do the category request and create the img in DOM //
-const  requestCategory = (id) => {
+const requestCategory = (id) => {
     fetch(`https://api-charles-cantin.herokuapp.com/categories/${id}`)
         .then(response => response.json())
         .then((data) => {
-            data.image_id.forEach((e) => {
+            for(let i = 0; i < 6; i++) {
                 const img = document.createElement('img');
-                let url = e.image.formats.small.url;
-                img.src = `https://api-charles-cantin.herokuapp.com${encodeURI(url)}`;
+                if(data.image_id[i] !== undefined) {
+                    img.src = `${encodeURI(data.image_id[i].image.formats.small.url)}`;
+                } else {
+                    img.src = 'assets/images/charles-cantin-accueil_background.png';
+                    //btnMore.remove();
+                }
                 galery.appendChild(img);
-            })
+            }
         })
         .catch((err) => console.log(err));
 };
 requestCategory(8);
+
+btnMore.addEventListener('click', () => {
+    for(let i = 0; i < 6; i++) {
+        const img = document.createElement('img');
+        img.src = 'assets/images/charles-cantin-accueil_background.png';
+        galery.appendChild(img);
+    }
+});
 

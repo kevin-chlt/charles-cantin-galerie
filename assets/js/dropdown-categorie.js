@@ -1,8 +1,8 @@
-// Revert class at each click on categories button dropdown //
 const list = document.getElementById('category-list');
 const title = document.getElementById('category-title');
-let open = false;
 
+// Revert class at each click on categories button dropdown //
+let open = false;
 title.addEventListener('click', () => {
     if (!open) {
         title.className = 'title-open';
@@ -14,33 +14,20 @@ title.addEventListener('click', () => {
         return open = false;
 });
 
-
-// Put ID on category items //
-const setIdOnCategory = () => {
-    const listLength = list.children.length;
-    const allLi = list.children;
-
-    for(let i = 0; i < listLength; i++) {
-        allLi[i].setAttribute('id', 'category-'+ i);
-    }
-    return createEvent(listLength);
-}
 // Create event listener for each category & add function to put the "active" CSS class to the category item clicked   //
+const createEvent = () => {
+    let categoryActiveId = 8;
 
-
-const createEvent = (listLength) => {
-    let categoryActiveIndex = 7;
-
-    for(let i = 0; i < listLength; i++) {
+    for(let i = 1; i < list.children.length +1; i++) {
         const category = document.getElementById('category-'+ i);
         category.addEventListener('click', () => {
-            const oldCategory = document.getElementById('category-'+ categoryActiveIndex);
+            const oldCategory = document.getElementById('category-'+ categoryActiveId);
             oldCategory.classList.remove('active-category');
             category.className = 'active-category';
-            request(i+1);
-            return categoryActiveIndex = i;
+            clearGalery();
+            requestCategory(i);
+            return categoryActiveId = i;
         });
     }
 }
-setIdOnCategory();
-
+createEvent();

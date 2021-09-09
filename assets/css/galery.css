@@ -75,6 +75,39 @@ ol li:hover  {
     max-height: 80%;
 }
 
+/* BOUTON "VOIR PLUS" */
+
+.btn-more-container {
+    background: rgba(52, 66, 75, 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    padding: 12px 0;
+}
+
+.btn-more{
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background: #97AEBC;
+    padding: 8px 35px;
+    transition: 0.3s;
+}
+
+.btn-more:hover{
+    box-shadow: rgba(52, 66, 75, 0.6) 0px 15px 30px -8px inset, rgba(52, 66, 75, 0.7) 0px 9px 18px -12px inset;
+}
+
+.btn-more span {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-family: 'Montaga', serif;
+}
+
+.btn-more img, .arrow {
+    height: 30px;
+}
 
 /* Footer */
 footer{

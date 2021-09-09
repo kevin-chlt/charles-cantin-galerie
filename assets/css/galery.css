@@ -5,7 +5,7 @@
     background: rgba(52, 66, 75, 0.9);
     font-family: 'Oregano', cursive;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
     height: 10vh;
 }
@@ -65,51 +65,18 @@ ol li:hover  {
     justify-items: center;
     align-items: center;
     background: #97AEBC;
+    min-height: 80vh;
 }
 
 .image-container img {
     border-radius: 10px;
     margin: 20px 0;
-    width: 80%;
+    max-width: 80%;
     max-height: 80%;
 }
 
-/* BOUTON "VOIR PLUS" */
-
-.btn-more-container {
-    background: rgba(52, 66, 75, 0.9);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-    padding: 12px 0;
-}
-
-.btn-more{
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    background: #97AEBC;
-    padding: 8px 35px;
-    transition: 0.3s;
-}
-
-.btn-more:hover{
-    box-shadow: rgba(52, 66, 75, 0.6) 0px 15px 30px -8px inset, rgba(52, 66, 75, 0.7) 0px 9px 18px -12px inset;
-}
-
-.btn-more span {
-    color: #ffffff;
-    font-size: 1.3rem;
-    font-family: 'Montaga', serif;
-}
-
-.btn-more img, .arrow {
-    height: 30px;
-}
 
 /* Footer */
-
 footer{
     border-top: 1px solid #ffffff;
     height: 10vh;
@@ -130,11 +97,16 @@ footer span {
 }
 
 /* Media Queries */
-
-@media screen and (max-width: 1150px) {
+@media screen and (max-width: 1250px) {
     ol li {
         margin: 0 15px;
     }
+
+    .image-container img{
+             min-width: 70%;
+             max-width: 95%;
+             min-height: 70%;
+         }
 }
 
 @media screen and (max-width: 950px) {
@@ -167,7 +139,6 @@ footer span {
     .categories-container .title-close {
         font-size: 1.3rem;
         cursor: pointer;
-        background: rgba(52, 66, 75, 0.90);
         padding: 0;
     }
 
@@ -203,7 +174,7 @@ footer span {
 
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
     .categories-container h1, .btn-more {
         padding: 6px 20px;
     }

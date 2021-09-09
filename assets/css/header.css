@@ -67,17 +67,18 @@ header nav a:hover{
 
 @media screen and (max-width: 600px) {
     header{
-        height: 15vh;
+        height: 12vh;
     }
 
     header nav {
         justify-content: flex-start;
         align-items: center;
+        width: 100%;
     }
 
     header nav a {
         margin: 0 5px;
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         text-align: center;
     }
 

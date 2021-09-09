@@ -31,21 +31,21 @@ form {
 }
 
 .help-text{
-    transition: 0.3s;
     border-radius: 10px;
     display: none;
     flex-direction: column;
-    align-items: center;
     width: auto;
     align-self: center;
-    padding:15px 20px;
+    padding: 20px;
     margin: 5px 0;
     background: rgba(52, 66, 75, 0.80);
+    list-style-type: none;
 }
 
-.help-text span {
+.help-text li {
+    margin-bottom: 8px;
     color: #ffffff;
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-family: 'Montaga', serif;
 }
 
@@ -76,7 +76,6 @@ form {
 }
 
 .rgpd-box{
-    align-self: center;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,9 +84,10 @@ form {
 
 label{
     color: white;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-family: 'Montaga', serif;
     margin-bottom: 10px;
+    margin-left: 10px;
 }
 
 input[type = text], input[type= email], input[type = tel]{
@@ -159,13 +159,17 @@ footer span {
         font-size: 1.2rem;
     }
 
-    input[type = text], input[type= email], input[type = tel], textarea {
+    input[type = text], input[type= email], input[type = tel], textarea, .help-text li {
         font-size: 1.1rem;
     }
 
+    .rgpd-box {
+        display: inline-block;
+    }
+
     .rgpd-box label {
-        text-align: center;
-        font-size: 0.9rem;
+        font-size: 1rem;
+        margin-left: 5px;
     }
 
     form{
@@ -182,6 +186,13 @@ footer span {
     .container-fullname div,  .container-message{
         width: calc(100% - 30px);
     }
+
+    .title-container {
+        width: calc(100% - 40px);
+        text-align: center;
+        border-radius: inherit;
+    }
+
 }
 
 @media screen and (max-width: 600px) {
@@ -193,17 +204,28 @@ footer span {
         border-radius: 0;
     }
 
-    .title-container {
-        width: calc(100% - 40px);
-        text-align: center;
+    .title-container h1{
+        font-size: 1.1rem;
     }
 
-    label, .title-container h1, button{
+    .help-text{
+        border-radius: inherit;
+    }
+
+    .help-text li {
+        margin-bottom: 5px;
+    }
+
+    label, button, .help-text li{
         font-size: 1rem;
     }
 
     input[type = text], input[type= email], input[type = tel] {
         height: 2rem;
         font-size: 1rem;
+    }
+
+    .rgpd-box label {
+        text-align: center;
     }
 }

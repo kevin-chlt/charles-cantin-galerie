@@ -10,6 +10,7 @@ const jwtRequest = {
     })
 };
 
+
 // Send the request, get JWT and call the sendMessage method //
 const getJwt = async () => {
    let response = await fetch('https://api-charles-cantin.herokuapp.com/auth/local', jwtRequest)
@@ -32,7 +33,7 @@ const sendMessage = async (jwt) => {
         body: JSON.stringify({
             firstname: firstName.value,
             lastname: lastName.value,
-            telephone: telephone.value.toString(),
+            telephone: telephone.value,
             email: email.value,
             message: message.value
         })

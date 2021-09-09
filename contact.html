@@ -33,35 +33,35 @@
                 personnalisées, veuillez renseigner le formulaire de contact ci-dessous : </h1>
         </section>
         <form method="POST" action="#" id="form">
-            <div class="help-text" id="help-text"></div>
+            <ol class="help-text" id="help-text"></ol>
             <div class="container-fullname ">
                 <div>
-                    <label for="lastname">Votre nom:</label>
+                    <label for="lastname">Votre nom: *</label>
                     <input type="text" name="lastname" id="lastname"/>
                 </div>
                 <div>
-                    <label for="firstname">Votre prénom:</label>
+                    <label for="firstname">Votre prénom: *</label>
                     <input type="text" name="firstname" id="firstname" />
                 </div>
                 <div>
-                    <label for="phone">Téléphone:</label>
+                    <label for="phone">Téléphone: *</label>
                     <input type="tel" name="phone" id="phone" />
                 </div>
                 <div>
-                    <label for="email">Adresse email:</label>
+                    <label for="email">Adresse email: *</label>
                     <input type="email" name="email" id="email" />
                 </div>
             </div>
             <div class="container-message">
-                <label for="message">Message: </label>
+                <label for="message">Message: *</label>
                 <textarea name="message" id="message"></textarea>
+            </div>
+            <div class="rgpd-box">
+                <input type="checkbox" id="rgpd" name="rgpd" />
+                <label for="rgpd">J'acceptes les conditions de récolte de mes données personnelles. *</label>
             </div>
             <button type="submit" id="submitBtn">Envoyer</button>
         </form>
-        <div class="rgpd-box">
-            <input type="checkbox" id="rgpd" name="rgpd" />
-            <label for="rgpd">J'acceptes les conditions de récolte de mes données personnelles.</label>
-        </div>
     </main>
     <footer>
         <span>Made by Kevin CHALLIT</span>

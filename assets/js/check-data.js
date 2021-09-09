@@ -11,7 +11,6 @@ let status = [];
 requirejs(['node_modules/validator/validator.min'], (validator) => {
     form.addEventListener('submit', async(e) => {
         e.preventDefault()
-        console.log(telephone.value)
         if(validator.isEmpty(firstName.value) || !validator.isAlpha(firstName.value || firstName.value.length > 50) ) {
             status.push('Veuillez saisir un prénom composé uniquement de lettres.') ;
         }
@@ -45,7 +44,7 @@ const displayStatus = (status) => {
     cleanHelpText()
     helpText.style.display = 'flex';
     for(let i = 0; i < status.length; i++) {
-        const span = document.createElement('span');
+        const span = document.createElement('li');
         span.textContent = status[i];
         helpText.appendChild(span);
     }

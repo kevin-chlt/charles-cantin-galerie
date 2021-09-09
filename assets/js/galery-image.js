@@ -16,8 +16,8 @@ const requestCategory = (id) => {
         .then((data) => {
             for(let i = 0; i < 6; i++) {
                 const img = document.createElement('img');
-                if(data.image_id[i] !== undefined) {
-                    img.src = `${encodeURI(data.image_id[i].image.formats.small.url)}`;
+                if(data.image[i] !== undefined) {
+                    img.src = `${encodeURI(data.image[i].image.formats.small.url)}`;
                 } else {
                     img.src = 'assets/images/charles-cantin-accueil_background.png';
                     //btnMore.remove();
@@ -31,14 +31,14 @@ requestCategory(8);
 
 
 btnMore.addEventListener('click', () => {
-    fetch(`https://api-charles-cantin.herokuapp.com/upload/files?${url}`)
-        .then((res) => res.json())
-        .then((data) => {
+    //fetch(`https://api-charles-cantin.herokuapp.com/upload/files?${url}`)
+        //.then((res) => res.json())
+        //.then((data) => {
             for (let i = 0; i < 6; i++) {
                 const img = document.createElement('img');
                 img.src = 'assets/images/charles-cantin-accueil_background.png';
                 galery.appendChild(img);
             }
-        })
+        //})
 });
 

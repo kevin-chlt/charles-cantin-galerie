@@ -10,7 +10,7 @@ const jwtRequest = {
     })
 };
 
-// Send the request, get JWT and call the sendMessage() //
+// Send the request, get JWT and call the sendMessage method //
 const getJwt = async () => {
    let response = await fetch('https://api-charles-cantin.herokuapp.com/auth/local', jwtRequest)
     if(response.ok) {
@@ -20,11 +20,12 @@ const getJwt = async () => {
 }
 
 
-// Create a new request with the JWT and form data then sent to the API and add status//
+// Create a new request with the JWT and form data then sent them to the API //
 const sendMessage = async (jwt) => {
     const newMessageRequest = {
         method: 'POST',
         headers: new Headers({
+
             'Content-Type': 'application/json',
             'Authorization': 'Bearer '+jwt,
         }),
@@ -44,11 +45,4 @@ const sendMessage = async (jwt) => {
     }
 }
 
-// Clear the inputs after send the message //
-const clearInputs = () => {
-    for(let i = 0; i < form.elements.length; i++) {
-        form.elements[i].value = ''
-    }
-    rgpd.checked = false;
-}
 

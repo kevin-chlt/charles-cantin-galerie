@@ -6,12 +6,12 @@ const telephone = document.getElementById('phone');
 const message = document.getElementById('message');
 const rgpd = document.getElementById('rgpd');
 let helpText = document.getElementById('help-text');
-
 let status = [];
 
 requirejs(['node_modules/validator/validator.min'], (validator) => {
-    form.addEventListener('submit',  async(e) => {
+    form.addEventListener('submit', async(e) => {
         e.preventDefault()
+        console.log(telephone.value)
         if(validator.isEmpty(firstName.value) || !validator.isAlpha(firstName.value || firstName.value.length > 50) ) {
             status.push('Veuillez saisir un prénom composé uniquement de lettres.') ;
         }
@@ -31,17 +31,18 @@ requirejs(['node_modules/validator/validator.min'], (validator) => {
             status.push('Vous devez accepter nos termes concernant vos données.')
         }
         if(status.length === 0) {
-            clearInputs();
             await getJwt()
+            clearInputs();
         }
-        cleanHelpText();
         displayStatus(status);
+        return status = [];
     });
 });
 
 
 //Create loop for display the status in the help-text div //
 const displayStatus = (status) => {
+    cleanHelpText()
     helpText.style.display = 'flex';
     for(let i = 0; i < status.length; i++) {
         const span = document.createElement('span');
@@ -50,11 +51,20 @@ const displayStatus = (status) => {
     }
 }
 
+
 // Delete child of help-text div //
 const cleanHelpText = () => {
     let helpTextLength = helpText.children.length;
     for(let i = helpTextLength - 1; i >= 0; i--) {
         helpText.children[i].remove();
     }
+}
 
+
+// Clear the inputs after send the message //
+const clearInputs = () => {
+    for(let i = 0; i < form.elements.length; i++) {
+        form.elements[i].value = ''
+    }
+    rgpd.checked = false;
 }

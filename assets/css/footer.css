@@ -1,0 +1,42 @@
+/* Footer */
+footer{
+    border-top: 1px solid #ffffff;
+    height: 12vh;
+    background: rgba(52, 66, 75, 0.90);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer span {
+    color: #ffffff;
+    font-size: 1rem;
+    font-style: italic;
+    font-family: 'Oregano', serif;
+    padding-bottom: 4px;
+    border-bottom: 1px #ffffff solid;
+    margin: 0 20px;
+}
+
+footer span:last-of-type {
+    font-style: initial;
+    border-bottom: none;
+}
+
+footer span:last-of-type:hover {
+    border-bottom: 1px #ffffff solid;
+    cursor: pointer;
+}
+
+footer form {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+}
+
+footer input {
+    width: 80%;
+    outline: none;
+}

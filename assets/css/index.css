@@ -73,11 +73,11 @@ footer span {
 @media screen and (max-width: 630px) {
     main nav {
         top: 50px;
+        left: 0;
     }
 
     nav a {
         font-size: 1.4rem;
-        left: 0;
     }
 
     .separator{
@@ -93,7 +93,6 @@ footer span {
 @media screen and (max-width: 400px) {
     main nav {
         top: 20px;
-        left: 0;
     }
 
     nav a {

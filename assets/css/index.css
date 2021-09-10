@@ -81,8 +81,7 @@ footer span {
     }
 
     .separator{
-        top: 70px;
-        width: 100%;
+        top: 60px;
     }
 
     img {
@@ -92,20 +91,13 @@ footer span {
 }
 
 @media screen and (max-width: 400px) {
-    main{
-        height: 100vh;
-    }
-
     main nav {
         top: 20px;
+        left: 0;
     }
 
     nav a {
         font-size: 1.1rem;
-    }
-
-    .separator{
-        top: 60px;
     }
 }
 

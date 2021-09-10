@@ -94,14 +94,12 @@ footer span {
 
 @media screen and (max-width: 400px) {
     main nav {
+        width: 95%;
         top: 20px;
     }
 
     nav a {
         font-size: 1.1rem;
-    }
-    img{
-        width: 95%;
     }
 }
 

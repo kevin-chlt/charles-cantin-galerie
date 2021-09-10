@@ -52,8 +52,9 @@ const displayPictures = (pictures) => {
         figure.appendChild(img);
         figure.appendChild(figcaption)
         if(pictures[i] !== undefined) {
+            console.log(pictures[i])
             img.src = encodeURI(pictures[i].image.url);
-            figcaption.textContent = pictures[i].image.name;
+            figcaption.textContent = pictures[i].name;
         } else if(itemBegin !== 0) {
             break;
         }

@@ -65,14 +65,34 @@ ol li:hover  {
     justify-items: center;
     align-items: center;
     background: #97AEBC;
+    padding: 10px;
 }
 
-.image-container img {
+figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 500px;
+    border-bottom: rgba(255, 255, 255, 0.37) 2px solid;
+    margin: 0;
     border-radius: 10px;
-    margin: 20px 0;
-    width: 300px;
-    min-height: 300px
 }
+
+figure img {
+    padding: 20px 20px 0;
+    min-width: 300px;
+    max-width: 95%;
+    height: 350px;
+}
+
+figcaption {
+    color: rgba(255, 255, 255, 0.8);
+    font-family: 'Oregano', serif;
+    font-style: italic;
+    margin-bottom: 15px;
+    text-decoration: underline;
+}
+
 
 /* BOUTON "VOIR PLUS" */
 
@@ -135,10 +155,10 @@ footer span {
     }
 
     .image-container img{
-             min-width: 70%;
-             max-width: 95%;
-             min-height: 70%;
-         }
+        min-width: 150px;
+        max-width: 95%;
+        height: 270px;
+    }
 }
 
 @media screen and (max-width: 950px) {
@@ -217,7 +237,7 @@ footer span {
     }
 
     .image-container img {
-        height: auto;
-        max-height: 250px;
+        max-height: 300px;
+        max-width: 95%
     }
 }

@@ -18,6 +18,7 @@ adminFormDisplayBtn.addEventListener('click' , () => {
 
 requirejs(['node_modules/validator/validator.min'], (validator) => {
     adminForm.addEventListener('submit', async(e) => {
+        adminSubmitBtn.disabled = true;
         e.preventDefault()
         if(validator.isEmpty(adminMail.value) || !validator.isEmail(adminMail.value)){
             adminMail.value = '';
@@ -27,7 +28,7 @@ requirejs(['node_modules/validator/validator.min'], (validator) => {
             adminPass.placeholder = "Mot de passe invalide";
         } else {
             localStorage.setItem('token', await getJwt(adminMail.value, adminPass.value))
-            location.href = 'https://galerie-charles-cantin.herokuapp.com/messages.html'
+            location.href = 'https://charles-cantin-galerie.herokuapp.com/messages.html'
         }
     })
 })
@@ -48,6 +49,6 @@ const getJwt = async (mail, pass) => {
 
     if(response.ok && response.status === 200) {
         let jwtData = await response.json()
-        return JSON.stringify(jwtData.jwt)
+        return jwtData.jwt;
     }
 }

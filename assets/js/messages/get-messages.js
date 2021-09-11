@@ -7,7 +7,7 @@ const getMessages = async () => {
     loadingIcon.style.display = 'flex'
     let response = await fetch('https://api-charles-cantin.herokuapp.com/contacts', {
         headers: new Headers({
-            'Authorization': 'Bearer '+JSON.parse(token)
+            'Authorization': 'Bearer '+token
         })
     })
     loadingIcon.style.display = 'none';
@@ -22,10 +22,11 @@ const getMessages = async () => {
     } else if (response.status === 401 || response.status === 403) {
         helpText.style.display = 'flex';
         helpText.textContent = 'Vous n\'êtes pas autorisé à visiter cette page'
-    } else {
-        helpText.style.display = 'flex';
-        helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement.'
     }
+    response.catch(() => {
+        helpText.style.display = 'flex';
+        helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement.';
+    })
 }
 
 

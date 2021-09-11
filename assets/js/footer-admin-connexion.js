@@ -27,6 +27,7 @@ requirejs(['node_modules/validator/validator.min'], (validator) => {
             adminPass.placeholder = "Mot de passe invalide";
         } else {
             localStorage.setItem('token', await getJwt(adminMail.value, adminPass.value))
+            //location.href = 'https://galerie-charles-cantin.herokuapp.com/messages.html'
         }
     })
 })
@@ -47,8 +48,7 @@ const getJwt = async (mail, pass) => {
 
     if(response.ok && response.status === 200) {
         let jwtData = await response.json()
+        console.log(jwtData.jwt);
         return JSON.stringify(jwtData.jwt)
-        //localStorage.setItem('tokens', JSON.stringify(jwtData.jwt))
-        //location.href = 'file:///Users/kevin/Desktop/charles-cantin-galerie/messages.html';
     }
 }

@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
+
+main {
+    background: #97AEBC;
+    padding: 20px 60px;
+    min-height: 80vh;
+}
+
+section {
+    background: rgba(52, 66, 75, 0.75);
+    padding: 10px 20px;
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+section:first-of-type, .full-name{
+    margin: 0;
+}
+
+section div:first-of-type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px #ffffff solid;
+    padding-bottom: 15px;
+}
+
+
+.trash {
+    width: 70px;
+    height: 70px;
+}
+
+
+.full-name {
+    color: #ffffff;
+    font-size: 1.4rem;
+    font-family: 'Oregano', serif;
+    letter-spacing: 1px;
+}
+
+section p, section span{
+    font-size: 1.2rem;
+    color: #ffffff;
+    font-family: 'Montaga', serif;
+}
+
+
+@media screen and (max-width: 675px){
+    main {
+        padding: 20px 30px;
+    }
+
+    .full-name{
+        font-size: 1.1rem;
+    }
+
+    section p, section span {
+        font-size: 1rem;
+    }
+
+    .trash {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    main{
+        padding: 20px 0;
+    }
+    section{
+        border-radius: 0;
+    }
+
+}

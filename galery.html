@@ -5,10 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galerie Photo | Charles Cantin</title>
     <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/galery.css" />
     <script src="node_modules/requirejs/require.js"></script>
     <script src="assets/js/dropdown-categorie.js" defer ></script>
     <script src="assets/js/galery-image.js" defer ></script>
+    <script src="assets/js/footer-admin-connexion.js" defer ></script>
+
 </head>
 <body>
     <header>
@@ -56,6 +59,12 @@
     </main>
     <footer>
         <span>Made by Kevin CHALLIT</span>
+        <span id="admin-open-btn"> Administration </span>
+        <form id="form-admin" method="POST" action="#">
+            <input type="" name="admin-mail" id="admin-mail" placeholder="Adresse e-mail"/>
+            <input type="password" name="password-admin" id="password-admin" placeholder="Mot de passe" />
+            <button type="submit" id="admin-submit-btn"> Connexion </button>
+        </form>
     </footer>
 </body>
 </html>

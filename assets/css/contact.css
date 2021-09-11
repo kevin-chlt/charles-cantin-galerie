@@ -23,7 +23,7 @@ main{
     font-weight: normal;
 }
 
-form {
+.contact-form {
     margin-top: 20px;
     display: flex;
     flex-direction: column;
@@ -82,7 +82,7 @@ form {
     padding-bottom: 10px;
 }
 
-label{
+.contact-form label{
     color: white;
     font-size: 1.2rem;
     font-family: 'Montaga', serif;
@@ -90,14 +90,14 @@ label{
     margin-left: 10px;
 }
 
-input[type = text], input[type= email], input[type = tel]{
+input[type = text], .contact-form input[type= email], input[type = tel]{
     outline: none;
     height: 70%;
     width: 80%;
     font-size: 1.2rem;
 }
 
-textarea{
+.contact-form  textarea{
     height: 150px;
     outline: none;
     margin-top: 10px;
@@ -107,7 +107,7 @@ textarea{
     width: 90%;
 }
 
-button{
+.contact-form button{
     width: 25%;
     align-self: center;
     background: rgba(52, 66, 75, 0.80);
@@ -120,33 +120,13 @@ button{
     margin-bottom: 15px;
 }
 
-button:hover{
+.contact-form button:hover{
     background: #97AEBC;
     text-decoration: underline;
     cursor: pointer;
     box-shadow: #97AEBC 0px 15px 30px -8px inset, rgba(52, 66, 75, 0.9) 0px 9px 18px -12px inset;
     border: solid 1px rgba(52, 66, 75, 0.80);
 }
-
-footer{
-    border-top: 1px solid #ffffff;
-    height: 10vh;
-    background: rgba(52, 66, 75, 0.90);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer span {
-    color: #ffffff;
-    font-size: 1rem;
-    font-style: italic;
-    font-family: 'Oregano', serif;
-    padding-bottom: 4px;
-    border-bottom: 1px #ffffff solid;
-}
-
 
 @media screen and (max-width: 1050px) {
     .container-message{
@@ -155,11 +135,11 @@ footer span {
 }
 
 @media screen and (max-width: 950px) {
-    .title-container h1, label, button {
+    .title-container h1, .contact-form label, .contact-form button {
         font-size: 1.2rem;
     }
 
-    input[type = text], input[type= email], input[type = tel], textarea, .help-text li {
+    input[type = text], .contact-form input[type= email], input[type = tel], textarea, .help-text li {
         font-size: 1.1rem;
     }
 
@@ -172,7 +152,7 @@ footer span {
         margin-left: 5px;
     }
 
-    form{
+    .contact-form {
         align-items: center;
     }
 
@@ -196,7 +176,7 @@ footer span {
 }
 
 @media screen and (max-width: 600px) {
-    form, .container-fullname {
+    .contact-form, .container-fullname {
         width: 100%;
     }
 
@@ -216,11 +196,11 @@ footer span {
         margin-bottom: 5px;
     }
 
-    label, button, .help-text li{
+    .contact-form label, .contact-form button, .help-text li{
         font-size: 1rem;
     }
 
-    input[type = text], input[type= email], input[type = tel] {
+    input[type = text], .contact-form input[type= email], input[type = tel] {
         height: 2rem;
         font-size: 1rem;
     }

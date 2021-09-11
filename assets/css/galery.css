@@ -128,25 +128,6 @@ figcaption {
     height: 30px;
 }
 
-/* Footer */
-footer{
-    border-top: 1px solid #ffffff;
-    height: 10vh;
-    background: rgba(52, 66, 75, 0.90);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-footer span {
-    color: #ffffff;
-    font-size: 1rem;
-    font-style: italic;
-    font-family: 'Oregano', serif;
-    padding-bottom: 4px;
-    border-bottom: 1px #ffffff solid;
-}
 
 /* Media Queries */
 @media screen and (max-width: 1250px) {

@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Charles Cantin</title>
     <link rel="stylesheet" href="assets/css/header.css" />
+    <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/contact.css" />
     <script src="node_modules/requirejs/require.js" defer></script>
     <script type="text/javascript" src="assets/js/check-data.js" defer></script>
     <script src="assets/js/send-data.js" defer></script>
+    <script src="assets/js/footer-admin-connexion.js" defer></script>
 </head>
 <body>
     <header>
@@ -32,7 +34,7 @@
             <h1>Pour une demande d’informations ou toutes prestations
                 personnalisées, veuillez renseigner le formulaire de contact ci-dessous : </h1>
         </section>
-        <form method="POST" action="#" id="form">
+        <form class="contact-form" method="POST" action="#" id="form">
             <ol class="help-text" id="help-text"></ol>
             <div class="container-fullname ">
                 <div>
@@ -65,6 +67,12 @@
     </main>
     <footer>
         <span>Made by Kevin CHALLIT</span>
+        <span id="admin-open-btn"> Administration </span>
+        <form id="form-admin" method="POST" action="#">
+            <input type="" name="admin-mail" id="admin-mail" placeholder="Adresse e-mail"/>
+            <input type="password" name="password-admin" id="password-admin" placeholder="Mot de passe" />
+            <button type="submit" id="admin-submit-btn"> Connexion </button>
+        </form>
     </footer>
 </body>
 </html>

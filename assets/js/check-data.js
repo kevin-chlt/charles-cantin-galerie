@@ -30,7 +30,7 @@ requirejs(['node_modules/validator/validator.min'], (validator) => {
             status.push('Vous devez accepter nos termes concernant vos données.')
         }
         if(status.length === 0) {
-            await getJwt()
+            await sendMessage()
             clearInputs();
         }
         displayStatus(status);

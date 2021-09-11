@@ -1,39 +1,29 @@
 const main = document.getElementById('main');
-const token = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNjMxMzEzOTU3LCJleHAiOjE2MzM5MDU5NTd9.XI7XLb3oyZ723sH77zoXCyYAbHCteZxB9qi_GHUfr-U' //localStorage.getItem('token');
-
-
-// Make the API request with the token and get the content message, then call displayFonction //
-const getMessages = async () => {
-    let response = await fetch('https://api-charles-cantin.herokuapp.com/contacts', {
-        headers: new Headers({
-            'Authorization': 'Bearer '+token
-        })
-    })
-    if (response.ok && response.status === 200) {
-        let data = await response.json();
-        let dataSorted = data.sort((a, b) => a.id < b.id);
-        dataSorted.forEach(e => displayMessages(e));
-    }
-}
+const helpText = document.getElementById('help-text');
+const token = localStorage.getItem('token');
 
 
 // Fetch function for remove message by id //
-const removeMessage = (id) => {
-    let response =  fetch(`https://api-charles-cantin.herokuapp.com/contacts/${parseInt(id)}`, {
+const removeMessage = async (id) => {
+    let response = await fetch(`https://api-charles-cantin.herokuapp.com/contacts/${parseInt(id)}`, {
         method: 'DELETE',
         headers: new Headers({
             'Authorization': 'Bearer '+token
         }),
     })
+    helpText.style.display = 'flex';
     if(response.ok && response.status === 200) {
-        console.log('effacer')
+        helpText.textContent = 'Message supprimé avec succès';
+        document.getElementById(id).remove();
+    } else {
+        helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement';
     }
 }
 
 
 // Create the message section in the DOM dynamically //
 const displayMessages = (data) => {
-        const section = document.createElement('section');
+    const section = document.createElement('section');
         const containerUserInfos = document.createElement('div');
         const containerMessage = document.createElement('div');
         const userInfosText = document.createElement('h2');
@@ -53,10 +43,11 @@ const displayMessages = (data) => {
         containerMessage.append(userMessage);
         containerUserInfos.append(imgDeleteMessage)
 
+        section.id = data.id.toString();
         section.append(containerUserInfos);
         section.append(containerMessage);
 
-         main.append(section);
+        main.append(section);
 }
 
 // Verify easily if user is allow to access this page and redirect him when he isn't //

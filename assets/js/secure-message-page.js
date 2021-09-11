@@ -22,6 +22,7 @@ const removeMessage = (id) => {
     let response =  fetch('https://api-charles-cantin.herokuapp.com/contacts', {
         method: 'DELETE',
         headers: new Headers({
+            'Content-Type': 'application/json',
             'Authorization': 'Bearer '+token
         }),
         body: JSON.stringify({

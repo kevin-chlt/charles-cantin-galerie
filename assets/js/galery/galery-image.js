@@ -26,8 +26,20 @@ const createEvent = () => {
 createEvent();
 
 
+// Clean the galery image list //
+const clearGalery = () => {
+    let galeryLength = galery.children.length -1;
+    for(let i = galeryLength; i >= 0; i--) {
+        galery.children[i].remove()
+    }
+};
+
+
 // Request API, sort the pictures and call the displays functions //
 const requestCategory = async (id, itemBegin, itemEnd) => {
+    if(itemBegin === 0){
+        clearGalery();
+    }
     loadingIcon.style.display = 'flex'
     let response = await fetch (`https://api-charles-cantin.herokuapp.com/categories/${id}`);
     loadingIcon.style.display = 'none';
@@ -49,9 +61,6 @@ requestCategory(categoryActiveId, itemBegin, itemEnd)
 
 // Verify if the click is from a new category request or a btn-more click then create 6 pictures, if no 6 pic in DB, set default picture //
 const displayPictures = (pictures) => {
-    if(itemBegin === 0){
-        clearGalery();
-    }
     let length =  pictures.length < 6 ? 6 : pictures.length
     for(let i = 0; i < length; i++) {
         const figure = document.createElement('figure');
@@ -74,11 +83,5 @@ const displayPictures = (pictures) => {
 }
 
 
-// Clean the galery image list //
-const clearGalery = () => {
-    let galeryLength = galery.children.length -1;
-    for(let i = galeryLength; i >= 0; i--) {
-        galery.children[i].remove()
-    }
-};
+
 

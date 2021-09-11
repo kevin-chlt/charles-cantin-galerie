@@ -75,10 +75,10 @@ ol li:hover  {
 
 .loop div {
     position: absolute;
-    width: 16px;
-    height: 16px;
+    width: 32px;
+    height: 32px;
     margin: 5px;
-    border: 7px solid rgba(52, 66, 75, 0.8);
+    border: 13px solid rgba(52, 66, 75, 0.8);
     border-top-color: transparent;
     border-radius: 50%;
     animation: loop 0.8s linear infinite;

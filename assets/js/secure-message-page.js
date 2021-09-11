@@ -24,7 +24,9 @@ const removeMessage = (id) => {
         headers: new Headers({
             'Authorization': 'Bearer '+token
         }),
-        body: id
+        body: JSON.stringify({
+            id: parseInt(id)
+        })
     })
     if(response.ok && response.status === 200) {
         console.log('effacer')

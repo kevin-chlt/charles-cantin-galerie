@@ -1,5 +1,3 @@
-const submitContactBtn = document.getElementById('submitBtn');
-
 //Create a new request with the message from user in her body and sent the message to the API //
 const sendMessage = async () => {
     let response = await fetch('https://api-charles-cantin.herokuapp.com/contacts',{
@@ -21,8 +19,6 @@ const sendMessage = async () => {
     } else {
         status.push('Une erreur est apparu, merci de réessayer ultérieurement.')
     }
-    submitContactBtn.disabled = false;
-    submitContactBtn.textContent = 'Envoyer';
 }
 
 

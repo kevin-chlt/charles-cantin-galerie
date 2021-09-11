@@ -1,6 +1,7 @@
 const galery = document.getElementById('container-images-1');
 const list = document.getElementById('category-list');
 const helpText = document.getElementById('help-text');
+const loadingIcon = document.getElementById('loading-icon');
 
 let categoryActiveId = 8;
 let itemBegin = 0;
@@ -25,9 +26,11 @@ const createEvent = () => {
 createEvent();
 
 
-// Request API, sort the pictures and call the display function //
+// Request API, sort the pictures and call the displays functions //
 const requestCategory = async (id, itemBegin, itemEnd) => {
+    loadingIcon.style.display = 'flex'
     let response = await fetch (`https://api-charles-cantin.herokuapp.com/categories/${id}`);
+    loadingIcon.style.display = 'none';
     if(response.ok && response.status === 200) {
         let data = await response.json();
         const categoryPictures = data.image.filter((e) => e.category === parseInt(id)) // Filter the image where the relation "category" field is = to id //
@@ -70,6 +73,7 @@ const displayPictures = (pictures) => {
         galery.appendChild(figure);
     }
 }
+
 
 // Clean the galery image list //
 const clearGalery = () => {

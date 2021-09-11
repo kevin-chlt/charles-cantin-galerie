@@ -1,15 +1,22 @@
 const main = document.getElementById('main');
+const loadingIcon = document.getElementById('loading-icon');
 const token = localStorage.getItem('token');
 
 // Make the API request with the token and get the content message, then call displayFonction //
 const getMessages = async () => {
+    loadingIcon.style.display = 'flex'
     let response = await fetch('https://api-charles-cantin.herokuapp.com/contacts', {
         headers: new Headers({
             'Authorization': 'Bearer '+JSON.parse(token)
         })
     })
+    loadingIcon.style.display = 'none';
     if (response.ok && response.status === 200) {
         let data = await response.json();
+        if(data.length === 0){
+            helpText.style.display = 'flex';
+            helpText.textContent = 'Vous n\'avez pas de nouveaux messages';
+        }
         let dataSorted = data.sort((a, b) => a.id < b.id);
         dataSorted.forEach(e => displayMessages(e));
     } else if (response.status === 401 || response.status === 403) {
@@ -54,7 +61,7 @@ const displayMessages = (data) => {
 
 // Verify easily if user is allow to access this page and redirect him when he isn't //
 if (!token) {
-    window.location.href = 'https://api-charles-cantin.herokuapp.com/index.html';
+    window.location.href = 'https://charles-cantin-galerie.herokuapp.com/index.html';
 } else {
     getMessages();
 }

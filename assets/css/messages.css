@@ -9,17 +9,38 @@ main {
     align-items: center;
 }
 
+.loop {
+    display: none;
+    position: relative;
+    transform: translateZ(0) scale(1);
+}
+
+.loop div {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    border: 13px solid rgba(52, 66, 75, 0.8);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: loop 0.8s linear infinite;
+    top: 100px;
+}
+
+@keyframes loop {
+    0% { transform: translate(-50%,-50%) rotate(0deg); }
+    100% { transform: translate(-50%,-50%) rotate(360deg); }
+}
+
 .help-text{
     display: none;
     border-radius: 10px;
     padding: 20px;
-    margin: 5px 0;
     background: rgba(52, 66, 75, 0.80);
     color: #ffffff;
     font-size: 1.1rem;
     font-family: 'Montaga', serif;
+    margin-bottom: 20px;
 }
-
 
 section {
     background: rgba(52, 66, 75, 0.75);
@@ -28,6 +49,7 @@ section {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    width: 80%;
 }
 
 section:first-of-type, .full-name{
@@ -42,14 +64,19 @@ section div:first-of-type {
     padding-bottom: 15px;
 }
 
-
 .trash {
-    width: 70px;
-    height: 70px;
+    width: 30px;
+    height: 30px;
+    border-radius: 10%;
 }
 
+.trash:hover {
+    cursor: pointer;
+    box-shadow: rgb(255, 255, 255) 0px 20px 20px -12px inset, rgb(225, 225, 225) 0px 32px 19px -9px inset
+}
 
 .full-name {
+    width: 90%;
     color: #ffffff;
     font-size: 1.4rem;
     font-family: 'Oregano', serif;
@@ -63,7 +90,7 @@ section p, section span{
 }
 
 
-@media screen and (max-width: 675px){
+@media screen and (max-width: 775px){
     main {
         padding: 20px 30px;
     }
@@ -77,8 +104,8 @@ section p, section span{
     }
 
     .trash {
-        width: 50px;
-        height: 50px;
+        width: 20px;
+        height: 20px;
     }
 }
 
@@ -88,6 +115,7 @@ section p, section span{
     }
     section{
         border-radius: 0;
+        width: 100%;
     }
 
 }

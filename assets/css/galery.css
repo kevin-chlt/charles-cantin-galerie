@@ -57,7 +57,6 @@ ol li:hover  {
 }
 
 /* BLOC GALERY */
-
 .galery-container{
     display: flex;
     flex-direction: column;
@@ -65,6 +64,31 @@ ol li:hover  {
     min-height: 80vh;
     background: #97AEBC;
 }
+
+.loop {
+    display: none;
+    z-index: 1;
+    align-self: center;
+    position: relative;
+    transform: translateZ(0) scale(1);
+}
+
+.loop div {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    margin: 5px;
+    border: 7px solid rgba(52, 66, 75, 0.8);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: loop 0.8s linear infinite;
+}
+
+@keyframes loop {
+    0% { transform: translate(-50%,-50%) rotate(0deg); }
+    100% { transform: translate(-50%,-50%) rotate(360deg); }
+}
+
 
 .help-text{
     align-self: center;
@@ -124,6 +148,7 @@ figcaption {
     align-items: center;
     height: 8vh;
     padding: 12px 0;
+    background: #97AEBC;
 }
 
 .btn-more{

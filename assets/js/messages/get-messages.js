@@ -5,13 +5,19 @@ const token = localStorage.getItem('token');
 const getMessages = async () => {
     let response = await fetch('https://api-charles-cantin.herokuapp.com/contacts', {
         headers: new Headers({
-            'Authorization': 'Bearer '+token
+            'Authorization': 'Bearer '+JSON.parse(token)
         })
     })
     if (response.ok && response.status === 200) {
         let data = await response.json();
         let dataSorted = data.sort((a, b) => a.id < b.id);
         dataSorted.forEach(e => displayMessages(e));
+    } else if (response.status === 401 || response.status === 403) {
+        helpText.style.display = 'flex';
+        helpText.textContent = 'Vous n\'êtes pas autorisé à visiter cette page'
+    } else {
+        helpText.style.display = 'flex';
+        helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement.'
     }
 }
 

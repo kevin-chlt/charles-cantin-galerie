@@ -92,9 +92,9 @@ footer span {
     }
 }
 
+
 @media screen and (max-width: 400px) {
     main nav {
-        width: 95%;
         top: 20px;
     }
 

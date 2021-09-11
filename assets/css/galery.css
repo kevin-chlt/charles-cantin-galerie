@@ -58,6 +58,28 @@ ol li:hover  {
 
 /* BLOC GALERY */
 
+.galery-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 80vh;
+    background: #97AEBC;
+}
+
+.help-text{
+    align-self: center;
+    width: 60%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: rgba(52, 66, 75, 0.85);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: 'Montaga', serif;
+}
+
+
 .image-container{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -97,11 +119,10 @@ figcaption {
 /* BOUTON "VOIR PLUS" */
 
 .btn-more-container {
-    background: rgba(52, 66, 75, 0.9);
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 10vh;
+    height: 8vh;
     padding: 12px 0;
 }
 
@@ -109,13 +130,13 @@ figcaption {
     cursor: pointer;
     display: flex;
     align-items: center;
-    background: #97AEBC;
     padding: 8px 35px;
     transition: 0.3s;
+    background: rgba(52, 66, 75, 0.85);
 }
 
 .btn-more:hover{
-    box-shadow: rgba(52, 66, 75, 0.6) 0px 15px 30px -8px inset, rgba(52, 66, 75, 0.7) 0px 9px 18px -12px inset;
+     background: #97AEBC;
 }
 
 .btn-more span {

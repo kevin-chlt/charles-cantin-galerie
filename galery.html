@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="assets/css/footer.css" />
     <link rel="stylesheet" href="assets/css/galery.css" />
     <script src="node_modules/requirejs/require.js"></script>
-    <script src="assets/js/dropdown-categorie.js" defer ></script>
-    <script src="assets/js/galery-image.js" defer ></script>
+    <script src="assets/js/galery/dropdown-categorie.js" defer ></script>
+    <script src="assets/js/galery/galery-image.js" defer ></script>
+    <script src="assets/js/galery/btn-voir-plus.js" defer ></script>
     <script src="assets/js/footer-admin-connexion.js" defer ></script>
-
 </head>
 <body>
     <header>
@@ -47,8 +47,11 @@
                 <li id="category-8" class="active-category">A la une</li>
             </ol>
         </nav>
-        <section class="galery-container" >
-            <div class="image-container" id="container-images-1"></div>
+
+        <section class="galery-container">
+            <span class="help-text" id="help-text">COUCOU</span>
+            <div class="image-container" id="container-images-1">
+            </div>
             <div class="btn-more-container" id="btn-more-container">
                 <div role="button" class="btn-more" id="btn-more">
                     <span> Voir plus </span>

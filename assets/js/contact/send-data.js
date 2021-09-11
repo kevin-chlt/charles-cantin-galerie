@@ -17,7 +17,7 @@ const sendMessage = async () => {
     if(response.ok && response.status === 200) {
         status.push('Votre message à été envoyé avec succès.')
     } else {
-        status.push('Une erreur est apparu sur le formulaire, merci de retaper votre requête.')
+        status.push('Une erreur est apparu, merci de réessayer ultérieurement.')
     }
 }
 

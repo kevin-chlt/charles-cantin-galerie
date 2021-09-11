@@ -4,7 +4,22 @@ main {
     background: #97AEBC;
     padding: 20px 60px;
     min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.help-text{
+    display: none;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 5px 0;
+    background: rgba(52, 66, 75, 0.80);
+    color: #ffffff;
+    font-size: 1.1rem;
+    font-family: 'Montaga', serif;
+}
+
 
 section {
     background: rgba(52, 66, 75, 0.75);

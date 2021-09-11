@@ -19,15 +19,11 @@ const getMessages = async () => {
 
 // Fetch function for remove message by id //
 const removeMessage = (id) => {
-    let response =  fetch('https://api-charles-cantin.herokuapp.com/contacts', {
+    let response =  fetch(`https://api-charles-cantin.herokuapp.com/contacts/${parseInt(id)}`, {
         method: 'DELETE',
         headers: new Headers({
-            'Content-Type': 'application/json',
             'Authorization': 'Bearer '+token
         }),
-        body: JSON.stringify({
-            id: parseInt(id)
-        })
     })
     if(response.ok && response.status === 200) {
         console.log('effacer')

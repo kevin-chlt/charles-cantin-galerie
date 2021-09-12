@@ -36,7 +36,7 @@ main {
     background: rgba(52, 66, 75, 0.80);
     color: #ffffff;
     font-size: 1.1rem;
-    font-family: 'Montaga', serif;
+    font-family: Montaga, serif;
     margin-bottom: 20px;
 }
 
@@ -77,14 +77,14 @@ section div:first-of-type {
     width: 90%;
     color: #ffffff;
     font-size: 1.4rem;
-    font-family: 'Oregano', serif;
+    font-family: Oregano, serif;
     letter-spacing: 1px;
 }
 
 section p, section span{
     font-size: 1.2rem;
     color: #ffffff;
-    font-family: 'Montaga', serif;
+    font-family: Montaga, serif;
 }
 
 

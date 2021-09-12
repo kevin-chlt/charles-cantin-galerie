@@ -1,3 +1,6 @@
+@import url('assets/font/Montaga-Regular.ttf');
+@import url('assets/font/Oregano-Regular.ttf');
+
 body{
     margin: 0;
 }
@@ -22,7 +25,7 @@ header nav a{
     text-decoration: none;
     font-size: 1.7rem;
     color: #ffffff;
-    font-family: 'Oregano', serif;
+    font-family: Oregano , serif;
 }
 
 header nav a:hover{

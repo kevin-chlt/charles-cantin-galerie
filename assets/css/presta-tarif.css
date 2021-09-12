@@ -57,18 +57,18 @@ section div:first-of-type {
 .presta-title {
     color: #ffffff;
     font-size: 1.5rem;
-    font-family: 'Oregano', serif;
+    font-family: Oregano, serif;
     letter-spacing: 1px;
 }
 
 section p{
     font-size: 1.2rem;
     color: #ffffff;
-    font-family: 'Montaga', serif;
+    font-family: Montaga, serif;
 }
 
 section span{
-    font-family: 'Oregano', serif;
+    font-family: Oregano, serif;
     font-size: 1.5rem;
     color: #ffffff;
 }

@@ -1,7 +1,7 @@
 /* BLOC CHOIX CATEGORIES */
 .categories-container {
     background: rgba(52, 66, 75, 0.9);
-    font-family: 'Oregano', cursive;
+    font-family: Oregano, serif;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -98,7 +98,7 @@ ol li:hover  {
     background: rgba(52, 66, 75, 0.85);
     color: #ffffff;
     font-size: 1.1rem;
-    font-family: 'Montaga', serif;
+    font-family: Montaga , serif;
 }
 
 
@@ -132,7 +132,7 @@ figure img {
 
 figcaption {
     color: rgba(255, 255, 255, 0.8);
-    font-family: 'Oregano', serif;
+    font-family: Oregano, serif;
     font-style: italic;
     margin-bottom: 15px;
     text-decoration: underline;
@@ -166,7 +166,7 @@ figcaption {
 .btn-more span {
     color: #ffffff;
     font-size: 1.3rem;
-    font-family: 'Montaga', serif;
+    font-family: Montaga, serif;
 }
 
 .btn-more img, .arrow {

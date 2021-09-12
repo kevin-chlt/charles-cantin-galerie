@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Oregano&display=swap');
-
 main {
     background: #97AEBC;
     padding: 20px 60px;
@@ -29,15 +27,21 @@ section div:first-of-type {
 
 .presta-title {
     color: #ffffff;
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     font-family: 'Oregano', serif;
     letter-spacing: 1px;
 }
 
-section p, section span{
-    font-size: 1.4rem;
+section p{
+    font-size: 1.2rem;
     color: #ffffff;
     font-family: 'Montaga', serif;
+}
+
+section span{
+    font-family: 'Oregano', serif;
+    font-size: 1.5rem;
+    color: #ffffff;
 }
 
 footer{

@@ -23,12 +23,12 @@ const getMessages = async () => {
         helpText.style.display = 'flex';
         helpText.textContent = 'Vous n\'êtes pas autorisé à visiter cette page'
     }
-    response.catch(() => {
-        helpText.style.display = 'flex';
-        helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement.';
-    })
 }
 
+getMessages().catch(() => {
+    helpText.style.display = 'flex';
+    helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement.';
+})
 
 // Create the message section in the DOM dynamically //
 const displayMessages = (data) => {

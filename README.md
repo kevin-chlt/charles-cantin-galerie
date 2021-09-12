@@ -20,7 +20,7 @@ Pour le back, un CMS headless était recommandé.
 Pour ma part, j'ai utilisé:  
 - HTML/CSS
 - Javascript Vanilla
-- Le CMS Headless "Strapi" avec un back-office intégré et une API relié à une base de donnée MySQL.
+- Le CMS Headless "Strapi" (Node.js) avec un back-office intégré et une API relié à une base de donnée MySQL.
 
 ## 3. Procédure de mise en place en local 
 - Cloner le fichier sur votre ordinateur avec  

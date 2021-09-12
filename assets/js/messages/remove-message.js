@@ -13,10 +13,10 @@ const removeMessage = async (id) => {
     if(response.ok && response.status === 200) {
         helpText.textContent = 'Message supprimé avec succès';
         document.getElementById(id).remove();
-    } else {
-        helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement';
     }
 }
+removeMessage().catch(() => {helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement'})
+
 
 // Event delegation //
 document.addEventListener('click',(e) => {

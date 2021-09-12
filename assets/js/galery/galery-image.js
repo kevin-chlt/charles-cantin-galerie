@@ -41,25 +41,49 @@ const requestCategory = async (id, itemBegin, itemEnd) => {
         clearGalery();
     }
     loadingIcon.style.display = 'flex'
-    let response = await fetch (`https://api-charles-cantin.herokuapp.com/categories/${id}`);
+    let response = await fetch (`https://api-charles-cantin.herokuapp.com/categories/`);
     loadingIcon.style.display = 'none';
     if(response.ok && response.status === 200) {
         let data = await response.json();
-        const categoryPictures = data.image.filter((e) => e.category === parseInt(id)) // Filter the image where the relation "category" field is = to id //
-        const sortedPictures = categoryPictures.sort((a, b) => a.id < b.id) // Sort the picture by id //
-        const sixFirstPictures = sortedPictures.slice(itemBegin, itemEnd); // Take the 6th last added first pictures //
-        displayPictures(sixFirstPictures);
-        displayBtnMore(categoryPictures)
-    } else {
-        helpText.style.display = 'flex'
-        helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement.'
+        id === 8 ? getTopPicture(data, itemBegin, itemEnd) : getPicturesByCategory(id, data[id -1], itemBegin, itemEnd)
     }
-
 }
-requestCategory(categoryActiveId, itemBegin, itemEnd)
+requestCategory(categoryActiveId, itemBegin, itemEnd).catch(() => {
+    loadingIcon.style.display = 'none';
+    helpText.style.display = 'flex'
+    helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement.'
+})
 
 
-// Verify if the click is from a new category request or a btn-more click then create 6 pictures, if no 6 pic in DB, set default picture //
+// Filter picture by category, sort them and take the 6th first //
+const getPicturesByCategory = (id, data, itemBegin,  itemEnd) => {
+    const categoryPictures = data.image.filter((e) => e.category === parseInt(id)) // Filter the image where the relation "category" field is = to id //
+    const sortedPictures = categoryPictures.sort((a, b) => a.id < b.id) // Sort the picture by id //
+    const sixFirstPictures = sortedPictures.slice(itemBegin, itemEnd); // Take the 6th last added first pictures //
+    displayPictures(sixFirstPictures);
+    displayBtnMore(categoryPictures);
+}
+
+
+// Filter the pictures, get the top, sort them and take the 6th first //
+const getTopPicture = (data, itemBegin,  itemEnd) => {
+    let pictures = [];
+    for(let i = 0; i < data.length; i++) {
+        for (let j = 0; j < data[i].image.length; j++) {
+            if(data[i].image[j].isTop === true) {
+                pictures.push(data[i].image[j]);
+            }
+        }
+    }
+    const sortedPictures = pictures.sort((a, b) => a.id < b.id);
+    const sixFirstPictures = sortedPictures.slice(itemBegin, itemEnd); // Take the 6th last added first pictures //
+    displayPictures(sixFirstPictures);
+    displayBtnMore(pictures);
+}
+
+
+
+// Create 6 pictures, if no 6 pic in the array, set default picture //
 const displayPictures = (pictures) => {
     let length =  pictures.length < 6 ? 6 : pictures.length
     for(let i = 0; i < length; i++) {

@@ -13,12 +13,13 @@ const sendMessage = async () => {
             message: message.value
         })
     })
-
     if(response.ok && response.status === 200) {
         status.push('Votre message à été envoyé avec succès.')
-    } else {
-        status.push('Une erreur est apparu, merci de réessayer ultérieurement.')
     }
 }
+
+sendMessage().catch(() => {
+    status.push('Une erreur est apparu, merci de réessayer ultérieurement.')
+})
 
 

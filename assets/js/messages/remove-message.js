@@ -21,6 +21,8 @@ const removeMessage = async (id) => {
 // Event delegation //
 document.addEventListener('click',(e) => {
     if(e.target.className === 'trash'){
-        removeMessage(e.target.id);
+        if(confirm('Cette action est irrévocable, souhaitez vous effacer le message ?')){
+            removeMessage(e.target.id);
+        }
     }
 });

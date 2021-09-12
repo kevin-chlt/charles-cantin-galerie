@@ -1,6 +1,34 @@
 main {
     background: #97AEBC;
     padding: 20px 60px;
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loop {
+    display: none;
+    align-self: center;
+    position: relative;
+    transform: translateZ(0) scale(1);
+}
+
+.loop div {
+    position: absolute;
+    width: 32px;
+    height: 32px;
+    margin: 5px;
+    border: 13px solid rgba(52, 66, 75, 0.8);
+    border-top-color: transparent;
+    border-radius: 50%;
+    animation: loop 0.8s linear infinite;
+}
+
+@keyframes loop {
+    0% { transform: translate(-50%,-50%) rotate(0deg); }
+    100% { transform: translate(-50%,-50%) rotate(360deg); }
 }
 
 section {
@@ -10,6 +38,7 @@ section {
     display: flex;
     flex-direction: column;
     border-radius: 10px;
+    width: 80%;
 }
 
 section:first-of-type, .presta-title{
@@ -44,24 +73,7 @@ section span{
     color: #ffffff;
 }
 
-footer{
-    border-top: 1px solid #ffffff;
-    height: 10vh;
-    background: rgba(52, 66, 75, 0.90);
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
-footer span {
-    color: #ffffff;
-    font-size: 1rem;
-    font-style: italic;
-    font-family: 'Oregano', serif;
-    padding-bottom: 4px;
-    border-bottom: 1px #ffffff solid;
-}
 @media screen and (max-width: 675px){
     main {
         padding: 20px 30px;
@@ -72,14 +84,18 @@ footer span {
     main{
         padding: 20px 0;
     }
+
     section{
         border-radius: 0;
+        width: 90%;
     }
-    .presta-title{
+
+    .presta-title, section span{
         font-size: 1.3rem;
     }
 
-    section p, section span {
+    section p  {
         font-size: 1rem;
+
     }
 }

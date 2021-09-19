@@ -105,7 +105,3 @@ const displayPictures = (pictures) => {
         galery.appendChild(figure);
     }
 }
-
-
-
-

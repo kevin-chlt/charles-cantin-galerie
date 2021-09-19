@@ -8,36 +8,38 @@ const rgpd = document.getElementById('rgpd');
 let helpText = document.getElementById('help-text');
 let status = [];
 
-requirejs(['node_modules/validator/validator.min'], (validator) => {
-    form.addEventListener('submit', async(e) => {
-        e.preventDefault()
-        if(validator.isEmpty(firstName.value) || !validator.isAlpha(firstName.value || firstName.value.length > 50) ) {
-            status.push('Veuillez saisir un prénom composé uniquement de lettres.') ;
-        }
-        if(validator.isEmpty(lastName.value) || !validator.isAlpha(lastName.value) || lastName.value.length > 50){
-            status.push('Veuillez saisir un nom composé uniquement de lettres.');
-        }
-        if(validator.isEmpty(email.value) || !validator.isEmail(email.value)) {
-            status.push('Veuillez saisir une adresse email valide.');
-        }
-        if(!validator.isMobilePhone(telephone.value, 'fr-FR')) {
-            status.push('Veuillez saisir un numéro de téléphone valide.')
-        }
-        if(!validator.isLength(message.value, {min: 10, max: 2400})){
-            status.push('Veuillez entrer un message valide.')
-        }
-        if(rgpd.checked === false) {
-            status.push('Vous devez accepter nos termes concernant vos données.')
-        }
-        if(status.length === 0) {
-            await sendMessage()
-            clearInputs();
-        }
-        displayStatus(status);
-        return status = [];
+form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    Validator.useLang('fr');
+    let validation = new Validator({
+        FirstName: firstName.value.trim(),
+        LastName: lastName.value.trim(),
+        Email: email.value.trim(),
+        Telephone: telephone.value.trim(),
+        Message: message.value.trim(),
+        ToS: rgpd.checked
+    }, {
+        FirstName: 'required|alpha',
+        LastName: 'required|alpha',
+        Email: 'required|email',
+        Telephone: ['required', 'regex:/^(\\+?33|0)[67]\\d{8}$/'],
+        Message: 'required',
+        ToS: 'accepted'
     });
+    validation.setAttributeNames({
+        FirstName: 'Prénom',
+        LastName: 'Nom',
+        ToS: 'Conditions de récoltes des données'
+    });
+    if(validation.fails()) {
+        status = Object.values(validation.errors.all())
+    } else {
+        await sendMessage()
+        clearInputs();
+    }
+    displayStatus(status);
+    return status = [];
 });
-
 
 //Create loop for display the status in the help-text div //
 const displayStatus = (status) => {
@@ -50,7 +52,6 @@ const displayStatus = (status) => {
     }
 }
 
-
 // Delete child of help-text div //
 const cleanHelpText = () => {
     let helpTextLength = helpText.children.length;
@@ -58,7 +59,6 @@ const cleanHelpText = () => {
         helpText.children[i].remove();
     }
 }
-
 
 // Clear the inputs after send the message //
 const clearInputs = () => {

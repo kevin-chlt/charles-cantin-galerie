@@ -22,7 +22,7 @@ Pour ma part, j'ai utilisé:
 - Javascript Vanilla
 - Le CMS Headless "Strapi" (Node.js) avec un back-office intégré et une API relié à une base de donnée MySQL.
 
-## 3. Procédure de mise en place en local 
+## 3. Procédure de mise en place
 - Cloner le fichier sur votre ordinateur avec  
 `git clone https://github.com/kevin-chlt/charles-cantin-galerie.git`
 - Installer les dépendances de l'application avec  

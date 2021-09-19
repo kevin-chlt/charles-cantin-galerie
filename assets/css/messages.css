@@ -70,7 +70,7 @@ section div:first-of-type {
 
 .trash:hover {
     cursor: pointer;
-    box-shadow: rgb(255, 255, 255) 0px 20px 20px -12px inset, rgb(225, 225, 225) 0px 32px 19px -9px inset
+    box-shadow: rgb(255, 255, 255) 0 20px 20px -12px inset, rgb(225, 225, 225) 0 32px 19px -9px inset
 }
 
 .full-name {

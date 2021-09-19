@@ -15,7 +15,6 @@ const removeMessage = async (id) => {
         document.getElementById(id).remove();
     }
 }
-removeMessage().catch(() => {helpText.textContent = 'Une erreur est apparu, merci de réessayer ultérieurement'})
 
 
 // Event delegation //

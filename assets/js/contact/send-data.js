@@ -10,7 +10,7 @@ const sendMessage = async () => {
             lastname: lastName.value,
             telephone: telephone.value,
             email: email.value,
-            message: message.value
+            message: sanitize(message.value)
         })
     })
     if(response.ok && response.status === 200) {
@@ -18,8 +18,12 @@ const sendMessage = async () => {
     }
 }
 
-sendMessage().catch(() => {
-    status.push('Une erreur est apparu, merci de réessayer ultérieurement.')
-})
-
-
+const sanitize = (string) => {
+    const map = {
+        '<': '<<',
+        '>': '>>',
+        "/": '//',
+    };
+    const reg = /[<>\/]/ig;
+    return string.replace(reg, (match) => (map[match])) ;
+}

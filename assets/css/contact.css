@@ -19,7 +19,7 @@ main{
     color: #ffffff;
     font-size: 1.4rem;
     margin: inherit;
-    font-family: 'Montaga', serif;
+    font-family: Montaga, serif;
     font-weight: normal;
 }
 
@@ -34,19 +34,18 @@ main{
     border-radius: 10px;
     display: none;
     flex-direction: column;
+    align-items: center;
     width: auto;
     align-self: center;
     padding: 20px;
-    margin: 5px 0;
     background: rgba(52, 66, 75, 0.80);
     list-style-type: none;
 }
 
 .help-text li {
-    margin-bottom: 8px;
     color: #ffffff;
     font-size: 1.1rem;
-    font-family: 'Montaga', serif;
+    font-family: Montaga, serif;
 }
 
 .container-fullname{
@@ -80,22 +79,21 @@ main{
     display: flex;
     align-items: center;
     justify-content: center;
-    padding-bottom: 10px;
 }
 
 .contact-form label{
-    color: white;
+    color: #ffffff;
     font-size: 1.2rem;
-    font-family: 'Montaga', serif;
+    font-family: Montaga, serif;
     margin-bottom: 10px;
 }
-
 
 input[type = text], .contact-form input[type= email], input[type = tel]{
     outline: none;
     height: 70%;
     width: 80%;
     font-size: 1.2rem;
+    font-family: Montaga, serif;
 }
 
 .contact-form textarea{
@@ -103,29 +101,25 @@ input[type = text], .contact-form input[type= email], input[type = tel]{
     outline: none;
     resize: none;
     font-size: 1.2rem;
-    font-family: 'Montaga', serif;
+    font-family: Montaga, serif;
     width: 90%;
 }
 
 .contact-form button{
-    width: 25%;
     align-self: center;
     background: rgba(52, 66, 75, 0.80);
-    padding: 8px 15px;
+    padding: 8px 35px;
     color: #ffffff;
     font-size: 1.2rem;
-    font-family: 'Montaga', serif;
-    transition: 0.5s;
+    font-family: Montaga, serif;
+    transition: 0.3s;
     border: none;
     margin-bottom: 15px;
 }
 
 .contact-form button:hover{
     background: #97AEBC;
-    text-decoration: underline;
     cursor: pointer;
-    box-shadow: #97AEBC 0px 15px 30px -8px inset, rgba(52, 66, 75, 0.9) 0px 9px 18px -12px inset;
-    border: solid 1px rgba(52, 66, 75, 0.80);
 }
 
 @media screen and (max-width: 1050px) {
@@ -135,7 +129,7 @@ input[type = text], .contact-form input[type= email], input[type = tel]{
 }
 
 @media screen and (max-width: 950px) {
-    .title-container h1, .contact-form label, .contact-form button {
+    .title-container h1{
         font-size: 1.2rem;
     }
 
@@ -145,6 +139,7 @@ input[type = text], .contact-form input[type= email], input[type = tel]{
 
     .rgpd-box {
         display: inline-block;
+        margin-bottom: 10px;
     }
 
     .rgpd-box label {
@@ -190,6 +185,8 @@ input[type = text], .contact-form input[type= email], input[type = tel]{
 
     .help-text{
         border-radius: inherit;
+        width: 100%;
+        align-items: flex-start;
     }
 
     .help-text li {

@@ -17,8 +17,7 @@
   },
   "homepage": "https://github.com/kevin-chlt/charles-cantin-galerie#readme",
   "dependencies": {
-    "requirejs": "^2.3.6",
-    "validator": "^13.6.0"
+    "validatorjs": "^3.22.1"
   },
   "devDependencies": {}
 }

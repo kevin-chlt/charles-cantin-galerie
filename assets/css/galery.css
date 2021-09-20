@@ -153,6 +153,7 @@ figure{
     position: fixed;
     top: 0;
     cursor: pointer;
+    z-index: 1;
 }
 
 figure img {

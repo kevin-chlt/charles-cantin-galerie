@@ -11,7 +11,7 @@ window.addEventListener('click', (e) => {
         modal.append(picture)
         document.body.append(modal);
 
-        if(window.matchMedia("max-width: 500px")) {
+        if(window.matchMedia("max-width: 700px")) {
             const closeBtn = document.createElement('span');
             closeBtn.textContent = "X";
             closeBtn.className = 'close-modal'
@@ -21,13 +21,16 @@ window.addEventListener('click', (e) => {
 });
 
 
+
 // Delete the modal when click on the background or click on the cross in responsive screen //
 window.addEventListener('click', (e) => {
     if(e.target.className === 'modal'){
         e.target.remove();
     }
-    if(e.target.className === 'close-modal') {
-        document.querySelector('.modal').remove()
-    }
 })
 
+window.addEventListener('touchstart', (e) => {
+       if(e.target.className === 'close-modal') {
+        document.querySelector('.modal').remove()
+      }
+})

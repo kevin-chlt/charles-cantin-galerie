@@ -324,4 +324,13 @@ figcaption {
         height: auto;
         max-width: 90%;
     }
+
+    .close-modal {
+        font-size: 30px;
+        position: absolute;
+        right: 10px;
+        top: 10vh;
+        color: #ffffff;
+        font-family: Oregano, sans-serif;
+    }
 }

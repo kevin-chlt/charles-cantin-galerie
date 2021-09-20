@@ -94,6 +94,7 @@ const displayPictures = (pictures) => {
         figure.appendChild(figcaption)
         if(pictures[i] !== undefined) {
             img.src = encodeURI(pictures[i].image.url);
+            img.id = pictures[i].image.id;
             figcaption.textContent = pictures[i].name;
         } else if(itemBegin !== 0) {
             break;

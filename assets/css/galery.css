@@ -128,14 +128,17 @@ figure{
     cursor: default;
     animation-name: displayModal;
     animation-duration: .7s;
-    animation-delay: 1ms;
 }
 
 @keyframes displayModal {
     from{
+        max-width: 0;
+        max-height: 0;
         opacity: 0;
     }
     to{
+        max-width: 65%;
+        max-height: 65%;
         opacity: 1;
     }
 }
